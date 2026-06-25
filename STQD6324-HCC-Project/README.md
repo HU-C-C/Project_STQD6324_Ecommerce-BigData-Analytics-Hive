@@ -6,6 +6,8 @@ This project presents a big data infrastructure pipeline implemented inside a Cl
 * **Infrastructure Architecture:** VMware/VirtualBox Sandbox -> Apache Hadoop HDFS -> Apache Hive Data Warehouse (Tez/YARN Engine) -> Apache Ambari Hive View.
 * **Analytical Integration:** After aggregating the corrected data inside Apache Hive, the resulting summary metrics were exported into a Google Colab notebook (Python), where `Pandas`, `Matplotlib`, and `Seaborn` were used to build six high-resolution charts spanning macroeconomic context, geography, seasonality, weekly behaviour, and product performance.
 
+**Why this dataset:** This dataset was selected because it pairs transaction-level e-commerce data with country-level macroeconomic indicators (GDP growth, inflation) in the same row, which is uncommon in publicly available retail datasets. This structure makes it possible to test whether revenue growth in an e-commerce business is driven by macroeconomic recovery, pricing changes, or organic demand growth — a question directly relevant to forecasting and inventory planning roles in the e-commerce industry. The dataset is also large enough (100,000 transaction records spanning 2009–2010, across 18 fields) to justify a big-data infrastructure approach (HDFS/Hive) rather than a simple spreadsheet analysis, making it a good fit for demonstrating the data management tools required in this course.
+
 ---
 
 ## 2. Data Cleaning & Transformation (Engineered via Hive SQL)
